@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.inventoryapp.InventoryController">
+  <children>
+    <ListView fx:id="inventoryListView" layoutX="20" layoutY="20" prefHeight="400" prefWidth="200"/>
+    <Button text="Use Item" layoutX="250" layoutY="20" onAction="#handleUseItem"/>
+    <Button text="Unequip Item" layoutX="250" layoutY="60" onAction="#handleUnequipItem"/>
+    <Button text="Take Damage" layoutX="250" layoutY="100" onAction="#handleTakeDamage"/>
+    <Label layoutX="20" layoutY="440" text="Stats:"/>
+    <Label fx:id="statsLabel" layoutX="20" layoutY="460"/>
+    <TextArea fx:id="itemStatsTextArea" layoutX="20" layoutY="500" prefHeight="80" prefWidth="560" wrapText="true"/> <!-- Display for item stats -->
+  </children>
+</AnchorPane>
