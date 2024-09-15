@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventoryapp.EditItemController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Edit Item" />
+
+        <Label layoutX="14.0" layoutY="40.0" text="Name:" />
+        <TextField fx:id="nameField" layoutX="14.0" layoutY="60.0" prefWidth="200.0" />
+
+        <Label layoutX="14.0" layoutY="100.0" text="Value:" />
+        <TextField fx:id="valueField" layoutX="14.0" layoutY="120.0" prefWidth="100.0" />
+
+        <Label layoutX="14.0" layoutY="160.0" text="Weight:" />
+        <TextField fx:id="weightField" layoutX="14.0" layoutY="180.0" prefWidth="100.0" />
+
+        <Label fx:id="specialAttributeLabel" layoutX="14.0" layoutY="220.0" text="Special Attribute:" />
+        <TextField fx:id="specialAttributeField" layoutX="14.0" layoutY="240.0" prefWidth="100.0" />
+
+        <Button layoutX="14.0" layoutY="300.0" text="Save Changes" onAction="#handleSaveChanges" />
+        <Button layoutX="120.0" layoutY="300.0" text="Cancel" onAction="#handleCancel" />
+    </children>
+</AnchorPane>
