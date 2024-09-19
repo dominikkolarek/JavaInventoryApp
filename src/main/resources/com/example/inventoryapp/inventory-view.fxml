@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="634.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inventoryapp.InventoryController">
@@ -28,6 +29,7 @@
     <Label layoutX="471.0" layoutY="498.0" text="Stats:" />
     <Label fx:id="statsLabel" layoutX="471.0" layoutY="498.0" prefHeight="106.0" prefWidth="207.0" />
     <TextArea fx:id="itemStatsTextArea" editable="false" layoutX="376.0" layoutY="317.0" prefHeight="106.0" prefWidth="302.0" wrapText="true" />
+      <ImageView fx:id="itemImageView" fitHeight="150.0" fitWidth="200.0" layoutX="427.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
   </children>
    <effect>
       <Blend mode="BLUE" />

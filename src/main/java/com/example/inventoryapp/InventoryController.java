@@ -10,15 +10,21 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class InventoryController {
+
+    @FXML
+    public ImageView itemImageView;
 
     @FXML
     private ListView<Item> inventoryListView;
@@ -248,8 +254,10 @@ public class InventoryController {
         inventoryListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 itemStatsTextArea.setText(newValue.displayInfo());
+                updateItemImage(newValue);
             } else {
                 itemStatsTextArea.clear();
+                updateItemImage(null);
             }
         });
     }
@@ -260,5 +268,21 @@ public class InventoryController {
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    private void updateItemImage(Item selectedItem) {
+        String imagePath = "";
+        if (selectedItem instanceof Weapon) {
+            imagePath = "/images/sword.png";
+        } else if (selectedItem instanceof Armor) {
+            imagePath = "/images/armor.png";
+        } else if (selectedItem instanceof Potion) {
+            imagePath = "/images/potion.png";
+        }
+
+        if (!imagePath.isEmpty()) {
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
+            itemImageView.setImage(image);
+        }
     }
 }

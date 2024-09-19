@@ -71,7 +71,7 @@ public class JsonControl {
     private static List<Item> generateDefaultItems() {
         return new ArrayList<>(List.of(
                 new Weapon("Basic Sword", 50, 3.0, 10),
-                new Armor("Basic Shield", 40, 5.0, 5),
+                new Armor("Basic Chestplate", 40, 5.0, 5),
                 new Potion("Small Health Potion", 25, 0.5, 20)
         ));
     }
