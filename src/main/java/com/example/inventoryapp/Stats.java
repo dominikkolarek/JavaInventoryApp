@@ -10,7 +10,6 @@ public class Stats {
 
     private static final String STATS_FILE_PATH = "stats.json"; // File path for saving stats
 
-    // Save stats to a file
     public static void saveStats() {
         try {
             JsonControl.saveStatsToJson(new Stats(), STATS_FILE_PATH);
@@ -20,7 +19,7 @@ public class Stats {
         }
     }
 
-    // Load stats from a file
+
     public static void loadStats() {
         try {
             JsonControl.loadStatsFromJson(STATS_FILE_PATH);
@@ -37,6 +36,6 @@ public class Stats {
     public static void takeDamage(int amount) {
         health = Math.max(0, health - amount);
         System.out.println("Took " + amount + " damage. Current health: " + health + "/" + maxHealth);
-        saveStats(); // Save stats after taking damage
+        saveStats();
     }
 }

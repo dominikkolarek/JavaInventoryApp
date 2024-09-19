@@ -1,6 +1,6 @@
 {
-    "defense": 5,
-    "attack": 10,
-    "health": 100,
+    "defense": 10,
+    "attack": 20,
+    "health": 90,
     "maxHealth": 100
 }
