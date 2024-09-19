@@ -8,7 +8,7 @@
         "value": 50
     },
     {
-        "equipped": false,
+        "equipped": true,
         "name": "Basic Chestplate",
         "weight": 5,
         "type": "Armor",
@@ -17,10 +17,10 @@
     },
     {
         "equipped": false,
-        "healAmount": 30,
-        "name": "Small Health Potion",
-        "weight": 0.2,
-        "type": "Potion",
-        "value": 10
+        "name": "dkllkdopawd",
+        "weight": 1,
+        "type": "Armor",
+        "defenseBoost": 12222222,
+        "value": 100
     }
 ]

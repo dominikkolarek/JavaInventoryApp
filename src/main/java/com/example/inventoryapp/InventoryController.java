@@ -283,6 +283,8 @@ public class InventoryController {
         if (!imagePath.isEmpty()) {
             Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
             itemImageView.setImage(image);
+        } else {
+            itemImageView.setImage(null);
         }
     }
 }
